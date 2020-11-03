@@ -550,8 +550,8 @@ int isAlpha(const unsigned char c)
 {
     return (   ((unsigned char)'a' <= c) && (c <= (unsigned char)'z')
             || ((unsigned char)'A' <= c) && (c <= (unsigned char)'Z')
-            || ((unsigned char)'à' <= c) && (c <= (unsigned char)'ÿ')
-            || ((unsigned char)'À' <= c) && (c <= (unsigned char)'ß'));
+            || ((unsigned char)'Ğ°' <= c) && (c <= (unsigned char)'Ñ')
+            || ((unsigned char)'Ğ' <= c) && (c <= (unsigned char)'Ğ¯'));
 }
 
 //------------------------------------------------------------------------------
