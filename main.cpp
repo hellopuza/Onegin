@@ -140,7 +140,7 @@ void TreeSort (void* values, size_t num, size_t size, int (*CompareFunc)(const v
  *  @param   CompareFunc is comparison function
  */
 
-void insert (struct node** pproot, void* pvalue, int (*CompareFunc)(const void*, const void*));
+void insert (struct node** pproot, void* pvalue, size_t size, int (*CompareFunc)(const void*, const void*));
 
 //------------------------------------------------------------------------------
 /*! @brief   Rewrite contents of tree into array
@@ -425,20 +425,17 @@ void TreeSort(void* values, size_t num, size_t size, int (*CompareFunc)(const vo
 {
     struct node* proot = nullptr;
 
-    void* newval = (void*)calloc(num, size);
     for (int i = 0; i < num; ++i)
     {
-        memmove((char*)newval + size*i, (char*)values + size*i, size);
-        insert(&proot, (char*)newval + size*i, CompareFunc);
+        insert(&proot, (char*)values + size*i, size, CompareFunc);
     }
 
     rewrite(proot, values, size);
-    free(newval);
 }
 
 //-----------------------------------------------------------------
 
-void insert(struct node** pproot, void* pvalue, int (*CompareFunc)(const void*, const void*))
+void insert(struct node** pproot, void* pvalue, size_t size, int (*CompareFunc)(const void*, const void*))
 {
     assert(pvalue);
 
@@ -446,14 +443,16 @@ void insert(struct node** pproot, void* pvalue, int (*CompareFunc)(const void*, 
     {
         *pproot = (struct node*)calloc(1, sizeof(struct node));
 
-        (*pproot)->data  = pvalue;
+        (*pproot)->data = (void*)calloc(1, size);
+        memmove((*pproot)->data, pvalue, size);
+
         (*pproot)->left  = nullptr;
         (*pproot)->right = nullptr;
     }
     else if (CompareFunc(pvalue, (*pproot)->data) < 0)
-        insert(&(*pproot)->left,  pvalue, CompareFunc);
+        insert(&(*pproot)->left,  pvalue, size, CompareFunc);
     else
-        insert(&(*pproot)->right, pvalue, CompareFunc);
+        insert(&(*pproot)->right, pvalue, size, CompareFunc);
 }
 
 //-----------------------------------------------------------------
@@ -587,6 +586,7 @@ void Print(char* text, size_t len, const char* filename)
 }
 
 //------------------------------------------------------------------------------
+
 
 
 
