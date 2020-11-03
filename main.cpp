@@ -443,7 +443,7 @@ void insert(struct node** pproot, void* pvalue, size_t size, int (*CompareFunc)(
     {
         *pproot = (struct node*)calloc(1, sizeof(struct node));
 
-        (*pproot)->data = (void*)calloc(1, size);
+        (*pproot)->data = (void*)calloc(1, 1);
         memmove((*pproot)->data, pvalue, size);
 
         (*pproot)->left  = nullptr;
