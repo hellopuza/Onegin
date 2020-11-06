@@ -1,10 +1,10 @@
 /*------------------------------------------------------------------------------
-    * File:        StringLib.cpp
-    * Description: Implementations of string functions
-    * Created:     6 nov 2020
-    * Copyright:   (C) 2020 MIPT
-    * Author:      Artem Puzankov
-    * Email:       puzankov.ao@phystech.edu
+    * File:        StringLib.cpp                                               *
+    * Description: Implementations of string functions                         *
+    * Created:     6 nov 2020                                                  *
+    * Copyright:   (C) 2020 MIPT                                               *
+    * Author:      Artem Puzankov                                              *
+    * Email:       puzankov.ao@phystech.edu                                    *
     */
 //------------------------------------------------------------------------------
 
@@ -235,8 +235,8 @@ int isAlpha(const unsigned char c)
 {
     return (   ((unsigned char)'a' <= c) && (c <= (unsigned char)'z')
             || ((unsigned char)'A' <= c) && (c <= (unsigned char)'Z')
-            || ((unsigned char)'Ð°' <= c) && (c <= (unsigned char)'Ñ')
-            || ((unsigned char)'Ð¯' <= c) && (c <= (unsigned char)'Ð¯'));
+            || ((unsigned char)'à' <= c) && (c <= (unsigned char)'ÿ')
+            || ((unsigned char)'À' <= c) && (c <= (unsigned char)'ß'));
 }
 
 //------------------------------------------------------------------------------

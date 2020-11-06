@@ -1,10 +1,10 @@
 /*------------------------------------------------------------------------------
-    * File:        SortLib.h
-    * Description: Sort functions library
-    * Created:     6 nov 2020
-    * Copyright:   (C) 2020 MIPT
-    * Author:      Artem Puzankov
-    * Email:       puzankov.ao@phystech.edu
+    * File:        SortLib.h                                                   *
+    * Description: Sort functions library                                      *
+    * Created:     6 nov 2020                                                  *
+    * Copyright:   (C) 2020 MIPT                                               *
+    * Author:      Artem Puzankov                                              *
+    * Email:       puzankov.ao@phystech.edu                                    *
     */
 //------------------------------------------------------------------------------
 

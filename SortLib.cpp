@@ -1,16 +1,16 @@
 /*------------------------------------------------------------------------------
-    * File:        SortLib.cpp
-    * Description: Implementations of sort functions
-    * Created:     6 nov 2020
-    * Copyright:   (C) 2020 MIPT
-    * Author:      Artem Puzankov
-    * Email:       puzankov.ao@phystech.edu
+    * File:        SortLib.cpp                                                 *
+    * Description: Implementations of sort functions                           *
+    * Created:     6 nov 2020                                                  *
+    * Copyright:   (C) 2020 MIPT                                               *
+    * Author:      Artem Puzankov                                              *
+    * Email:       puzankov.ao@phystech.edu                                    *
     */
 //------------------------------------------------------------------------------
 
 #include "SortLib.h"
 
-//-----------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 void TreeSort(void* values, size_t num, size_t size, int (*CompareFunc)(const void*, const void*))
 {
@@ -29,7 +29,7 @@ void TreeSort(void* values, size_t num, size_t size, int (*CompareFunc)(const vo
     rewrite(proot, values, size);
 }
 
-//-----------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 void insert(struct node** pproot, void* pvalue, size_t size, int (*CompareFunc)(const void*, const void*))
 {
@@ -54,7 +54,7 @@ void insert(struct node** pproot, void* pvalue, size_t size, int (*CompareFunc)(
         insert(&(*pproot)->right, pvalue, size, CompareFunc);
 }
 
-//-----------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 void* rewrite(struct node* proot, void* values, size_t size)
 {
@@ -74,3 +74,5 @@ void* rewrite(struct node* proot, void* values, size_t size)
 
     return values;
 }
+
+//------------------------------------------------------------------------------
