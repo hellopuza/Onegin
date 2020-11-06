@@ -101,7 +101,7 @@ char* GetText(FILE* fp, size_t len)
     assert(fp);
     assert(len);
 
-    char* text = (char*)calloc(len + 1, 1);
+    char* text = (char*)calloc(len + 2, 1);
     fread(text, 1, len, fp);
 
     return text;
@@ -235,8 +235,8 @@ int isAlpha(const unsigned char c)
 {
     return (   ((unsigned char)'a' <= c) && (c <= (unsigned char)'z')
             || ((unsigned char)'A' <= c) && (c <= (unsigned char)'Z')
-            || ((unsigned char)'à' <= c) && (c <= (unsigned char)'ÿ')
-            || ((unsigned char)'À' <= c) && (c <= (unsigned char)'ß'));
+            || ((unsigned char)'Ð°' <= c) && (c <= (unsigned char)'Ñ')
+            || ((unsigned char)'Ð¯' <= c) && (c <= (unsigned char)'Ð¯'));
 }
 
 //------------------------------------------------------------------------------
