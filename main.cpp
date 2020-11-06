@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------
-    * File:        Onegin.cpp                                                  *
+    * File:        main.cpp                                                    *
     * Description: Program sort strings of text file                           *
     * Created:     6 nov 2020                                                  *
     * Copyright:   (C) 2020 MIPT                                               *
