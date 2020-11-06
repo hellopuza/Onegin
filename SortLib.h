@@ -12,6 +12,8 @@
 #define SORTLIB_H_INCLUDED
 
 #include <stdlib.h>
+#include <mem.h>
+
 //#define NDEBUG
 #include <assert.h>
 
