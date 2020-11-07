@@ -16,6 +16,10 @@
 #include "String/StringLib.h"
 #include "Sort/SortLib.h"
 
+const char* output_name_1 = "text/SortedFromLeft.txt";
+const char* output_name_2 = "text/SortedFromRight.txt";
+const char* original_name = "text/original.txt";
+
 //------------------------------------------------------------------------------
 
 int main(int argc, char *argv[])

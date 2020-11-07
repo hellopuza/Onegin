@@ -23,12 +23,6 @@
 #define NOLINES  1
 #define NOSYMB   2
 
-//------------------------------------------------------------------------------
-
-const char* output_name_1 = "text/SortedFromLeft.txt";
-const char* output_name_2 = "text/SortedFromRight.txt";
-const char* original_name = "text/original.txt";
-
 const char* default_name = "text/Onegin.txt";
 
 //------------------------------------------------------------------------------
