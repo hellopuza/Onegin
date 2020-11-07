@@ -37,10 +37,10 @@ int main(int argc, char *argv[])
 
 
     MergeSort(InputText.Lines, InputText.LineNum, sizeof(struct line), CompareFromLeft);
-    Write   (InputText.Lines, InputText.LineNum, output_name_1);
+    Write    (InputText.Lines, InputText.LineNum, output_name_1);
 
     MergeSort(InputText.Lines, InputText.LineNum, sizeof(struct line), CompareFromRight);
-    Write   (InputText.Lines, InputText.LineNum, output_name_2);
+    Write    (InputText.Lines, InputText.LineNum, output_name_2);
 
     printf("\n Sort finished. Check files \"%s\" and  \"%s\"\n", output_name_1, output_name_2);
 

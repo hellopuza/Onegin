@@ -1,6 +1,6 @@
 /*------------------------------------------------------------------------------
-    * File:        mergesort.h                                                  *
-    * Description: Mergesort functions                                          *
+    * File:        mergesort.h                                                 *
+    * Description: Mergesort functions                                         *
     * Created:     9 nov 2020                                                  *
     * Copyright:   (C) 2020 MIPT                                               *
     * Author:      Artem Puzankov                                              *
