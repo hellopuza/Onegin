@@ -10,9 +10,11 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 
+#include <stdio.h>
 #include <locale.h>
-#include "StringLib.h"
-#include "SortLib.h"
+
+#include "String/StringLib.h"
+#include "Sort/SortLib.h"
 
 //------------------------------------------------------------------------------
 
@@ -34,10 +36,10 @@ int main(int argc, char *argv[])
     fclose(InputFILE);
 
 
-    TreeSort(InputText.Lines, InputText.LineNum, sizeof(struct line), CompareFromLeft);
+    MergeSort(InputText.Lines, InputText.LineNum, sizeof(struct line), CompareFromLeft);
     Write   (InputText.Lines, InputText.LineNum, output_name_1);
 
-    TreeSort(InputText.Lines, InputText.LineNum, sizeof(struct line), CompareFromRight);
+    MergeSort(InputText.Lines, InputText.LineNum, sizeof(struct line), CompareFromRight);
     Write   (InputText.Lines, InputText.LineNum, output_name_2);
 
     printf("\n Sort finished. Check files \"%s\" and  \"%s\"\n", output_name_1, output_name_2);
