@@ -35,7 +35,17 @@ int main(int argc, char *argv[])
 
     text_t InputText;
 
-    fillinStruct(&InputText, InputFILE);
+    int err = fillinStruct(&InputText, InputFILE);
+    switch (err)
+    {
+        case OK:      /* WOW! Program works correctly! eeeeeeeeeeeeeeeeee */ break;
+
+        case NOSYMB:  printf("\n File is empty!");                           return 0;
+
+        case NOLINES: printf("\n There are no lines with letters in text!"); return 0;
+
+        default:      assert(0);
+    }
 
     fclose(InputFILE);
 
@@ -51,7 +61,7 @@ int main(int argc, char *argv[])
 
     Print(InputText.Text, InputText.Size, original_name);
 
-    printf("\n Original text available in file \"%s\"\n", original_name);
+    printf("\n Original text is available in file \"%s\"\n", original_name);
 
 
     return 0;
