@@ -23,7 +23,7 @@
 #define NOLINES  1
 #define NOSYMB   2
 
-const char* default_name = "text/Onegin.txt";
+const char* default_name = "String/StringLib.h";
 
 //------------------------------------------------------------------------------
 
